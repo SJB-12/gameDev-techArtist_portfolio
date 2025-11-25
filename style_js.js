@@ -28,5 +28,20 @@ navLinks.forEach(link => {
   link.addEventListener("click", () => {
     clearActive();
     link.classList.add("active");
+    
+    // Close mobile menu if open
+    if (window.innerWidth <= 768) {
+      document.querySelector('.sidebar').classList.remove('active');
+    }
   });
+});
+
+// Mobile menu toggle
+const mobileMenuToggle = document.createElement('button');
+mobileMenuToggle.className = 'mobile-menu-toggle';
+mobileMenuToggle.innerHTML = '☰';
+document.body.appendChild(mobileMenuToggle);
+
+mobileMenuToggle.addEventListener('click', () => {
+  document.querySelector('.sidebar').classList.toggle('active');
 });

@@ -42,10 +42,11 @@
       </div>
 
       <div class="sidebar-buttons">
-        <a class="btn btn-resume" href="#" target="_blank">Resume</a>
-        <a class="btn btn-linkedin" href="#" target="_blank">LinkedIn</a>
-        <a class="btn btn-github" href="#" target="_blank">GitHub</a>
-      </div>
+  <a class="btn btn-resume" href="files/SumanB_Resume.pdf" target="_blank">Resume</a>
+  <a class="btn btn-linkedin" href="https://www.linkedin.com/in/suman-biswass" target="_blank">LinkedIn</a>
+  <a class="btn btn-github" href="https://github.com/SJB-12" target="_blank">GitHub</a>
+</div>
+
     </div>
 
   </aside>
@@ -67,10 +68,10 @@
               Hello, I'm <span class="name-color">Suman J. Biswas</span>
             </h2>
 
-            <p class="job-title">
-              <span class="job-role">Game Developer</span> •
-              <span class="job-role">Technical Artist</span>
-            </p>
+            <div class="job-title">
+                <div class="job-role">Game Developer</div>
+                <div class="job-role">Technical Artist</div>
+            </div>
 
             <p class="one-liner">
               Turning ideas into gameplay, problems into tools, and chaos into working builds.
@@ -81,7 +82,7 @@
           <div class="profile-wrapper">
             <div class="profile-frame">
               <div class="profile-inner">
-                <img src="profile.jpg" alt="Profile Image">
+                <img src="Images\sumanPhoto.png" alt="Profile Image">
               </div>
             </div>
           </div>
@@ -114,14 +115,15 @@
     <section id="about" class="section divider">
       <h2>About Me</h2>
       <p>
-        Unity developer focused on gameplay, interactions, UI, and smooth-feeling player systems – passionate about clean code and polished features. I enjoy creating responsive controls, intuitive UI flows, and small gameplay details that make the experience feel alive.
-      </p>
-      <p>
-        I've worked across VR interaction systems, scene logic, tools development, and performance improvements, switching between art and code whenever needed. I also built an internal AI gameplay testing prototype that could auto-play a cricket game using scene detection and timing logic.
-      </p>
-      <p>
-        My goal is simple: make gameplay smoother, interactions more natural, and development faster for the team – one solid feature at a time.
-      </p>
+  Unity developer focused on gameplay, interactions, UI, and smooth-feeling player systems – passionate about clean code and polished features. I enjoy creating responsive controls, intuitive UI flows, and small gameplay details that make the experience feel alive.
+</p>
+<p>
+  Alongside core gameplay work, I’ve also contributed to VR interaction features, scene logic, tools development, and performance improvements. I contributed to an internal AI gameplay testing prototype that could auto-play a cricket game using scene detection and timing logic.
+</p>
+<p>
+  My goal is simple: make gameplay smoother, interactions natural, and development faster for the team – one solid feature at a time.
+</p>
+
     </section>
 
     <!-- PROJECTS SECTION -->
@@ -130,19 +132,92 @@
 
       <div class="projects-grid">
 
+        <!-- PROJECT 1 -->
         <article class="project-card">
-          <h3>Automated Game-Testing Prototype</h3>
-          <p>AI-driven system that could auto-play a cricket game using YOLO + timing logic.</p>
+          <div class="project-video-container">
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="Videos/subkoVideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <h3>Subko Forest VR Environment</h3>
+          <div class="project-tools">
+            <span class="tool-tag">Unity</span>
+            <span class="tool-tag">Meta VR SDK</span>
+            <span class="tool-tag">C#</span>
+          </div>
+
+          <p>
+            A stylized VR forest environment built with immersive lighting, interactable props, 
+            and smooth VR movement mechanics. Designed to run optimally on Meta Quest hardware 
+            while maintaining a polished, atmospheric feel.
+          </p>
         </article>
 
+        <!-- PROJECT 2 -->
         <article class="project-card">
-          <h3>VR Interaction Systems</h3>
-          <p>Video playback systems, always-facing UI, VR controller improvements, and tooling.</p>
+          <div class="project-image-container">
+  <img src="Images\project2.png" alt="VR Interaction Preview" class="project-image">
+</div>
+
+
+          <h3>WCPL Game Tester Using Scene Detection & YOLO (Prototype)</h3>
+          <div class="project-tools">
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">YOLO</span>
+          </div>
+
+          <p>
+  A prototype that uses YOLO-based scene detection to automatically test the WCPL cricket game.
+  It reads game visuals, detects ball timing, and performs swiping actions to hit shots at the
+  perfect moment, automating repetitive gameplay testing.
+</p>
+
         </article>
 
+        <!-- PROJECT 3 -->
         <article class="project-card">
+          <div class="project-video-container">
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="Videos/CricinshotsProject0200-0400.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
           <h3>Cricinshots Game Assets</h3>
-          <p>Created 200+ optimized 3D assets & animations for a mobile title with 300K+ players.</p>
+          <div class="project-tools">
+            <span class="tool-tag">Unity</span>
+            <span class="tool-tag">Blender</span>
+          
+          </div>
+
+          <p>
+  Created 200+ optimized 3D assets for the Cricinshots cricket game, including props,
+  environment pieces, and gameplay elements. Ensured all models were optimized for mobile
+  performance, matched the art style, and integrated cleanly into Unity.
+</p>
+
+        </article>
+
+        <!-- PROJECT 4 - ADD YOUR CONTENT HERE -->
+        <article class="project-card">
+          <div class="project-video-container">
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="Videos/CarMechanics.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <h3>Car Mechanics Prototype</h3>
+          <div class="project-tools">
+            <span class="tool-tag">Unity</span>
+            <span class="tool-tag">C#</span>
+          </div>
+
+          <p>
+            A Unity-based car controller prototype featuring smooth acceleration, responsive turning, and natural drifting behavior. The system uses tuned wheel-collider physics, handbrake-activated drifts, and speed-based steering to make driving feel dynamic and fun while still grounded and controllable.
+          </p>
         </article>
 
       </div>
@@ -152,16 +227,40 @@
     <section id="skills" class="section divider">
       <h2>Skills</h2>
 
-      <div class="skills-grid">
-        <div class="skill-box">Unity</div>
-        <div class="skill-box">C#</div>
-        <div class="skill-box">VR Systems</div>
-        <div class="skill-box">Gameplay Programming</div>
-        <div class="skill-box">UI / UX</div>
-        <div class="skill-box">Technical Art</div>
-        <div class="skill-box">Blender</div>
-        <div class="skill-box">Python</div>
-        <div class="skill-box">HTML / CSS</div>
+      <div class="skills-categories-horizontal">
+        
+        <!-- Programming Languages -->
+        <div class="skill-category">
+          <h3 class="category-title">Programming</h3>
+          <div class="skills-vertical">
+            <div class="skill-box">C#</div>
+            <div class="skill-box">Python</div>
+            <div class="skill-box">HTML / CSS</div>
+          </div>
+        </div>
+
+        <!-- Softwares -->
+        <div class="skill-category">
+          <h3 class="category-title">Softwares</h3>
+          <div class="skills-vertical">
+            <div class="skill-box">Unity</div>
+            <div class="skill-box">Blender</div>
+            <div class="skill-box">Figma</div>
+            <div class="skill-box">GitHub</div>
+          </div>
+        </div>
+
+        <!-- Other Skills -->
+        <div class="skill-category">
+          <h3 class="category-title">Skills</h3>
+          <div class="skills-vertical">
+            <div class="skill-box">Gameplay Programming</div>
+            <div class="skill-box">VR Systems</div>
+            <div class="skill-box">UI / UX</div>
+            <div class="skill-box">Technical Art</div>
+          </div>
+        </div>
+
       </div>
     </section>
 
