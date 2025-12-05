@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman J. Biswas - Portfolio PDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            margin: 0.5in;
+            size: A4;
+        }
+        
+        :root {
+            --bg: #050a13;
+            --panel: #0a0f17;
+            --muted: #9fb0c6;
+            --accent: #4db8ff;
+            --highlight: rgba(77,184,255,0.32);
+            --text: #e6eef7;
+            --project-bg: #0d243d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: var(--bg) !important;
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--bg) !important;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 3px solid var(--accent);
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, rgba(77,184,255,0.1), rgba(77,184,255,0.05)) !important;
+            border-radius: 12px;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #65fa0f, #ffc402);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #5900ff;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+        
+        .contact-info span {
+            width: 100%;
+            text-align: left;
+        }
+        
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 25px 0;
+            page-break-inside: avoid;
+        }
+        
+        .stat-box {
+            background: rgba(255,255,255,0.05) !important;
+            padding: 20px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.06);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: #b9c6d3;
+            line-height: 1.3;
+        }
+        
+        /* Section Headers */
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+            background: linear-gradient(90deg, #62c0ff, #5e84ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            page-break-after: avoid;
+        }
+        
+        /* About Section */
+        .about {
+            page-break-inside: avoid;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .project-card {
+            background: var(--project-bg) !important;
+            border-radius: 10px;
+            border: 1px solid rgba(30,58,92,0.5);
+            overflow: hidden;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        
+        .project-media {
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(135deg, #1a3a52, #0d243d) !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 13px;
+            border-bottom: 1px solid rgba(77,184,255,0.2);
+        }
+        
+        .project-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 16px;
+        }
+        
+        .project-card h3 {
+            color: var(--accent);
+            font-size: 17px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        
+        .tool-tag {
+            padding: 4px 10px;
+            font-size: 11px;
+            color: #dce9ff;
+            background: rgba(255, 255, 255, 0.06) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        
+        .project-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #dbe8f5;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .skill-category {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border-radius: 12px;
+            padding: 20px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            page-break-inside: avoid;
+        }
+        
+        .skill-category h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--accent);
+            text-align: center;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .skill-box {
+            background: linear-gradient(135deg, rgba(77, 184, 255, 0.1), rgba(77, 184, 255, 0.05)) !important;
+            padding: 8px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(77, 184, 255, 0.2);
+            font-size: 13px;
+            color: #dbe8f5;
+            text-align: center;
+            width: 100%;
+            max-width: 160px;
+            font-weight: 500;
+        }
+        
+        /* Print Optimization */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                background: var(--bg) !important;
+            }
+            
+            .container {
+                background: var(--bg) !important;
+            }
+            
+            .header {
+                background: linear-gradient(135deg, rgba(77,184,255,0.1), rgba(77,184,255,0.05)) !important;
+            }
+            
+            .stat-box {
+                background: rgba(255,255,255,0.05) !important;
+            }
+            
+            .project-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                background: var(--project-bg) !important;
+            }
+            
+            .project-media {
+                background: linear-gradient(135deg, #1a3a52, #0d243d) !important;
+            }
+            
+            .tool-tag {
+                background: rgba(255, 255, 255, 0.06) !important;
+            }
+            
+            .skill-category {
+                page-break-inside: avoid;
+                background: rgba(255, 255, 255, 0.03) !important;
+            }
+            
+            .skill-box {
+                background: linear-gradient(135deg, rgba(77, 184, 255, 0.1), rgba(77, 184, 255, 0.05)) !important;
+            }
+            
+            .about {
+                page-break-inside: avoid;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Suman J. Biswas</h1>
+            <div class="subtitle">Game Developer | Technical Artist</div>
+            <div class="tagline">Turning ideas into gameplay, problems into tools, and chaos into working builds.</div>
+            <div class="contact-info">
+                <span>📧 Email: <a href="mailto:rb121202@gmail.com">rb121202@gmail.com</a></span>
+                <span>📱 Phone: +91-8624802918</span>
+                <span>🌐 Portfolio: <a href="https://sjb-12.github.io/gameDev-techArtist_portfolio">https://sjb-12.github.io/gameDev-techArtist_portfolio</a></span>
+                <span>💼 LinkedIn: <a href="https://www.linkedin.com/in/suman-biswass">https://www.linkedin.com/in/suman-biswass</a></span>
+                <span>💻 GitHub: <a href="https://github.com/SJB-12">https://github.com/SJB-12</a></span>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">1+</div>
+                <div class="stat-label">Years<br>Experience</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Completed<br>Projects</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">200K+</div>
+                <div class="stat-label">Users<br>Impacted</div>
+            </div>
+        </div>
+
+        <!-- About Me -->
+        <h2>About Me</h2>
+        <div class="about">
+            <p>Unity developer focused on gameplay, interactions, UI, and smooth-feeling player systems – passionate about clean code and polished features. I enjoy creating responsive controls, intuitive UI flows, and small gameplay details that make the experience feel alive.</p>
+            <p>Alongside core gameplay work, I've also contributed to VR interaction features, scene logic, tools development, and performance improvements. I contributed to an internal AI gameplay testing prototype that could auto-play a cricket game using scene detection and timing logic.</p>
+            <p>My goal is simple: make gameplay smoother, interactions natural, and development faster for the team – one solid feature at a time.</p>
+        </div>
+
+        <!-- Projects -->
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="Images/project4.png" alt="Subko Forest VR">
+                </div>
+                <div class="project-content">
+                    <h3>Subko Forest VR Environment</h3>
+                    <div class="project-tools">
+                        <span class="tool-tag">Unity</span>
+                        <span class="tool-tag">Meta VR SDK</span>
+                        <span class="tool-tag">C#</span>
+                    </div>
+                    <p>A stylized VR forest environment built with immersive lighting, interactable props, and smooth VR movement mechanics. Designed to run optimally on Meta Quest hardware while maintaining a polished, atmospheric feel.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="Images/project2.png" alt="WCPL Game Tester">
+                </div>
+                <div class="project-content">
+                    <h3>WCPL Game Tester Using Scene Detection & YOLO</h3>
+                    <div class="project-tools">
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">YOLO</span>
+                    </div>
+                    <p>A prototype that uses YOLO-based scene detection to automatically test the WCPL cricket game. It reads game visuals, detects ball timing, and performs swiping actions to hit shots at the perfect moment, automating repetitive gameplay testing.</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="Images/project3.png" alt="Cricinshots Assets">
+                </div>
+                <div class="project-content">
+                    <h3>Cricinshots Game Assets</h3>
+                    <div class="project-tools">
+                        <span class="tool-tag">Unity</span>
+                        <span class="tool-tag">Blender</span>
+                    </div>
+                    <p>Created 200+ optimized 3D assets for the Cricinshots cricket game, including props, environment pieces, and gameplay elements. Ensured all models were optimized for mobile performance, matched the art style, and integrated cleanly into Unity.</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="Images/project1.png" alt="Car Mechanics">
+                </div>
+                <div class="project-content">
+                    <h3>Car Mechanics Prototype</h3>
+                    <div class="project-tools">
+                        <span class="tool-tag">Unity</span>
+                        <span class="tool-tag">C#</span>
+                    </div>
+                    <p>A Unity-based car controller prototype featuring smooth acceleration, responsive turning, and natural drifting behavior. The system uses tuned wheel-collider physics, handbrake-activated drifts, and speed-based steering to make driving feel dynamic and fun while still grounded and controllable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <div class="skill-list">
+                    <div class="skill-box">C#</div>
+                    <div class="skill-box">Python</div>
+                    <div class="skill-box">HTML / CSS</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Software</h3>
+                <div class="skill-list">
+                    <div class="skill-box">Unity</div>
+                    <div class="skill-box">Blender</div>
+                    <div class="skill-box">Figma</div>
+                    <div class="skill-box">GitHub</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Specializations</h3>
+                <div class="skill-list">
+                    <div class="skill-box">Gameplay Programming</div>
+                    <div class="skill-box">VR Systems</div>
+                    <div class="skill-box">UI / UX</div>
+                    <div class="skill-box">Technical Art</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
